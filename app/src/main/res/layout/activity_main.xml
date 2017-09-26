@@ -18,6 +18,7 @@
         android:text="2" />
 
     <EditText
+        android:freezesText="true"
         android:id="@+id/edtU"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

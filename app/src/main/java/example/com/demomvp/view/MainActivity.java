@@ -1,7 +1,7 @@
 package example.com.demomvp.view;
 
+import android.app.Activity;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -10,7 +10,7 @@ import android.widget.Toast;
 import example.com.demomvp.R;
 import example.com.demomvp.presenter.LoginPresenterImp;
 
-public class MainActivity extends AppCompatActivity implements LoginView, View.OnClickListener {
+public class MainActivity extends Activity implements LoginView, View.OnClickListener {
 
     Button buttonOne, buttonTwo, btnLogin;
     EditText edtU, edtP;
