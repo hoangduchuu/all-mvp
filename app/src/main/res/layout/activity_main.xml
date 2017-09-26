@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="example.com.demomvp.main.MainActivity">
+    android:layout_height="match_parent">
 
     <Button
         android:id="@+id/btnOne"
@@ -18,9 +17,26 @@
         android:layout_below="@+id/btnOne"
         android:text="2" />
 
-    <ListView
-        android:id="@+id/lv"
+    <EditText
+        android:id="@+id/edtU"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></ListView>
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnTwo"
+        android:text="admin" />
+
+    <EditText
+        android:id="@+id/edtP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtU"
+        android:text="admin" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtP"
+        android:text="Login" />
+
 
 </RelativeLayout>
