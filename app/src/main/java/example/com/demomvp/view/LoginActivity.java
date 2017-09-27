@@ -10,7 +10,7 @@ import android.widget.Toast;
 import example.com.demomvp.R;
 import example.com.demomvp.presenter.LoginPresenterImp;
 
-public class MainActivity extends Activity implements LoginView, View.OnClickListener {
+public class LoginActivity extends Activity implements LoginView, View.OnClickListener {
 
     Button buttonOne, buttonTwo, btnLogin;
     EditText edtU, edtP;
