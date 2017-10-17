@@ -1,5 +1,8 @@
 package example.com.demomvp.main;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by hoang on 9/22/17.
  */
@@ -21,7 +24,22 @@ public class MainPresenter implements MainMVP.Presenter {
     }
 
     @Override
-    public void clickedButtonShowMessagePhatnua() {
-        view.showToastMessagePhatNua();
+    public void clickedButtonShowMessageAgain() {
+        view.showToastMessageAgain();
+    }
+
+    @Override
+    public void getListUSer() {
+        List<String> users = new ArrayList<>();
+
+        users.add("a");
+        users.add("c");
+        users.add("c");
+        users.add("d");
+        users.add("e");
+
+
+        view.showList(users);
+
     }
 }

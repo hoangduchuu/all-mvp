@@ -2,11 +2,16 @@ package example.com.demomvp.main;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import java.util.List;
+
+import es.dmoral.toasty.Toasty;
 import example.com.demomvp.R;
 
 public class MainActivity extends AppCompatActivity implements MainMVP.View, View.OnClickListener {
@@ -32,6 +37,12 @@ public class MainActivity extends AppCompatActivity implements MainMVP.View, Vie
 
         buttonOne.setOnClickListener(this);
         buttonTwo.setOnClickListener(this);
+
+        buttonOne.setOnClickListener(v -> {
+            // body
+            Log.e("abac", "abc");
+        });
+
     }
 
 
@@ -41,10 +52,18 @@ public class MainActivity extends AppCompatActivity implements MainMVP.View, Vie
     }
 
     @Override
-    public void showToastMessagePhatNua() {
+    public void showToastMessageAgain() {
         Toast.makeText(this, "Toast lan hai roi em", Toast.LENGTH_SHORT).show();
     }
 
+    @Override
+    public void showList(List<String> userList) {
+        Log.d("abc", "abc");
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, userList);
+        listView.setAdapter(adapter);
+        Toasty.success(this, "Success!", Toast.LENGTH_LONG, true).show();
+
+    }
 
 
     @Override
@@ -54,7 +73,9 @@ public class MainActivity extends AppCompatActivity implements MainMVP.View, Vie
                 presenter.clickedButtonShowMessage();
                 break;
             case R.id.btnTwo:
-                presenter.clickedButtonShowMessagePhatnua();
+//                presenter.clickedButtonShowMessageAgain();
+                presenter.getListUSer();
+
                 break;
             default:
                 break;

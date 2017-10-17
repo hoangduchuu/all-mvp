@@ -16,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/btnOne"
-        android:text="2" />
+        android:text="showList" />
 
     <ListView
         android:id="@+id/lv"

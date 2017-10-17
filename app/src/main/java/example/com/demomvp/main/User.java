@@ -18,6 +18,11 @@ public class User {
     public User() {
     }
 
+    public User(int age, String name) {
+        this.age = age;
+        this.name = name;
+    }
+
     public String getGender() {
         return gender;
     }
